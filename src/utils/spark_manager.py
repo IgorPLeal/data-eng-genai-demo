@@ -1,5 +1,5 @@
 import logging
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 from pyspark.sql import SparkSession
 
@@ -12,7 +12,7 @@ class SparkManager:
     def __init__(self, spark_config: Dict[str, Any]):
         self._app_name = spark_config.get("app_name", "SparkApp")
         self._master = spark_config.get("master", "local[*]")
-        self._session: SparkSession | None = None
+        self._session: Optional[SparkSession] = None
 
     def get_or_create(self) -> SparkSession:
         """Cria ou retorna a SparkSession existente."""

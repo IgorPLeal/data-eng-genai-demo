@@ -27,10 +27,6 @@ include = ["src*"]
 line-length = 88
 target-version = ["py39"]
 
-[tool.flake8]
-max-line-length = 88
-extend-ignore = ["W391"]
-
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
