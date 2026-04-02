@@ -1,0 +1,27 @@
+catalogo:
+  clientes_bronze:
+    path: "./data/input/dataset-json-clientes/data/clientes.json"
+    format: "json"
+    orient: "records"
+    lines: true
+
+  pedidos_bronze:
+    path: "./data/input/datasets-csv-pedidos/data/pedidos"
+    format: "csv"
+    separator: ";"
+    glob_pattern: "pedidos-*.csv"
+
+  top_10_clientes:
+    path: "./data/output/top_10_clientes"
+    format: "csv"
+    separator: ";"
+
+datasets:
+  clientes_repo: "https://github.com/infobarbosa/dataset-json-clientes"
+  clientes_local: "./data/input/dataset-json-clientes"
+  pedidos_repo: "https://github.com/infobarbosa/datasets-csv-pedidos"
+  pedidos_local: "./data/input/datasets-csv-pedidos"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
